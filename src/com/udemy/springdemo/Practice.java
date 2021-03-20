@@ -2,7 +2,7 @@ package com.udemy.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Practice4_InversionOfControlwithAnnotations {
+public class Practice {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
