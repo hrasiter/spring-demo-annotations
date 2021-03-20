@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 	
-	@Autowired
-	@Qualifier("randomFortuneService")
+//	@Autowired
+//	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 
-//	@Autowired
-//	public TennisCoach(FortuneService fs) {
-//		fortuneService = fs;
-//	}
+	@Autowired
+	public TennisCoach(@Qualifier("randomFortuneService")FortuneService fs) {
+		fortuneService = fs;
+	}
 	
 	public TennisCoach() {
 		// TODO Auto-generated constructor stub
