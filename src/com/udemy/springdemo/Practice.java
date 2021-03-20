@@ -16,6 +16,7 @@ public class Practice {
 		
 		//call some methon on the bean
 		System.out.println(footballCoach.getDailyWorkout());
+		System.out.println(footballCoach.getDailyFortune());
 		
 		//close the context
 		context.close();
