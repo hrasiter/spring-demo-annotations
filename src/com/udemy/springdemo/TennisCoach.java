@@ -17,8 +17,14 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated constructor stub
 	}
 	
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
+	
 	@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
+	public void doMyStuff(FortuneService fortuneService) {
+		System.out.println(">> TennisCoach: inside doMyStuff method!");
 		this.fortuneService = fortuneService;
 	}
 
