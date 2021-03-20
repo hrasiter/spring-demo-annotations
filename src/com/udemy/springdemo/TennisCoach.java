@@ -8,10 +8,21 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
 
-	@Autowired
-	public TennisCoach(FortuneService fs) {
-		fortuneService = fs;
+//	@Autowired
+//	public TennisCoach(FortuneService fs) {
+//		fortuneService = fs;
+//	}
+	
+	public TennisCoach() {
+		// TODO Auto-generated constructor stub
 	}
+	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
+
 	@Override
 	public String getDailyWorkout() {
 		return "Practice your backhand volley.";
