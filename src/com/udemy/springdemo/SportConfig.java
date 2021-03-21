@@ -19,5 +19,14 @@ public class SportConfig {
 	public Coach swimCoach() {
 		return new SwimCoach(sadFortuneService());
 	}
+	
+	@Bean
+	public FortuneService lazyFortuneService() {
+		return new LazyFortuneService();
+	}
+	
+	@Bean public Coach basketCoach() {
+		return new BasketCoach(lazyFortuneService());
+	}
 
 }
