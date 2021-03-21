@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,8 +17,9 @@ public class DatabaseFortuneService implements FortuneService {
 	
 	private Random myRandom = new Random();
 	
-	public DatabaseFortuneService() {
-		
+	@PostConstruct
+	public void doMyInitialStuff() {
+		System.out.println("DatabaseFortuneService: inside doMyInitialStuff method");
 		try {
 			File file = new File("src/fortunes.txt");
 			Scanner scanner = new Scanner(file);
@@ -31,7 +34,10 @@ public class DatabaseFortuneService implements FortuneService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
+	}
+	
+	public DatabaseFortuneService() {
+		System.out.println("DatabaseFortuneService: inside default constructor");	
 	}
 	
 	@Override
