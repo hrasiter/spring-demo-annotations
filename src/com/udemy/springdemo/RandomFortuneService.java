@@ -2,6 +2,7 @@ package com.udemy.springdemo;
 
 import java.util.Random;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +15,10 @@ public class RandomFortuneService implements FortuneService {
 	};
 	
 	private Random myRandom = new Random();
+	
+	public RandomFortuneService() {
+		System.out.println("\nRandomFortuneService: inside Default-constructor method.");
+	}
 	
 	@Override
 	public String getFortune() {

@@ -2,22 +2,25 @@ package com.udemy.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 	
-//	@Autowired
-//	@Qualifier("randomFortuneService")
+	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 
-	@Autowired
-	public TennisCoach(@Qualifier("randomFortuneService")FortuneService fs) {
-		fortuneService = fs;
-	}
+//	@Autowired
+//	public TennisCoach(@Qualifier("randomFortuneService")FortuneService fs) {
+//		System.out.println("TennisCoach: inside Autowired-constructor method");
+//		fortuneService = fs;
+//	}
 	
 	public TennisCoach() {
-		// TODO Auto-generated constructor stub
+		System.out.println("TennisCoach: inside Default-constructor method");
 	}
 	
 //	@Autowired
