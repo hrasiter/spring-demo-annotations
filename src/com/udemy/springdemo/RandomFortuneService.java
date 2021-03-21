@@ -2,7 +2,6 @@ package com.udemy.springdemo;
 
 import java.util.Random;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
